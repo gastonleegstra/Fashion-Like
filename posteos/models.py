@@ -17,9 +17,12 @@ class Post(models.Model):
     author = models.ForeignKey(User,on_delete=models.CASCADE, related_name='post_author')
     image = models.ManyToManyField(Image, blank=True)
     created = models.DateTimeField(default=timezone.now)
+
+    #La relacion ManytoMany genera tablas internas que guardan esta relacion
     dislikes = models.ManyToManyField(User, blank=True,related_name='dislikes')
     likes = models.ManyToManyField(User,blank=True,related_name='likes')
 
+    #indico el comportamiento de la clase que se ordene de forma descendente por fecha de creación
     class Meta:
         ordering = ['-created'] 
 
