@@ -5,7 +5,7 @@ from django.db.models.signals import post_save
 
 #genero ruta para guardar avatar
 def photo_up_path(instance,filename):
-    return '{0}/{1}'.format(instance.user.id, filename)
+    return '{0}/{1}'.format(instance.user.username,filename)
 
 # Create your models here.
 class UserProfile(models.Model):

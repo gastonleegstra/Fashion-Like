@@ -49,6 +49,7 @@ BASE_APPS = [
 
 MY_APPS = [
     'users',
+    'posteos',
 ]
 
 THIRD_APPS = []
