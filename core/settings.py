@@ -52,9 +52,21 @@ MY_APPS = [
     'posteos',
 ]
 
-THIRD_APPS = []
+THIRD_APPS = [
+    'tailwind',
+    'theme',
+    'django_browser_reload',
+]
 
 INSTALLED_APPS = BASE_APPS + MY_APPS + THIRD_APPS
+
+TAILWIND_APP_NAME = 'theme'
+
+NPM_BIN_PATH = '/home/gaston/.nvm/versions/node/v18.13.0/bin/npm'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,6 +76,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #Terceros
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -71,7 +85,8 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                    ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
