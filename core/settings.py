@@ -62,7 +62,7 @@ INSTALLED_APPS = BASE_APPS + MY_APPS + THIRD_APPS
 
 TAILWIND_APP_NAME = 'theme'
 
-NPM_BIN_PATH = '/home/gaston/.nvm/versions/node/v18.13.0/bin/npm'
+NPM_BIN_PATH = env("NPM_BIN_PATH")
 
 INTERNAL_IPS = [
     "127.0.0.1",

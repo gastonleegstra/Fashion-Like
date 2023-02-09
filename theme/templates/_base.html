@@ -1,0 +1,21 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-red-700">
+        <div class="container mx-auto p4">
+            <section class="flex items-center justify-center h-screen">
+                <div class="bg-lime-300	 rounded-xl w-full max-w-xl">
+                    <h1 class="font-mono text-5xl">Django + Tailwind = <span class = "animate-ping">💚</span></h1>
+                </div>    
+            </section>
+        </div>
+	</body>
+</html>
