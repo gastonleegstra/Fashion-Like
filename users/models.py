@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractUser
 from django.db.models.signals import post_save
 
@@ -9,7 +8,7 @@ def photo_up_path(instance,filename):
     return '{0}/{1}'.format(instance.user.username,filename)
 
 class User(AbstractUser):
-    email = models.EmailField(_("email address"), blank=True)
+    email = models.EmailField(("email address"), unique=True)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username"]
 
