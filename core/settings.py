@@ -52,7 +52,11 @@ MY_APPS = [
     'posteos',
 ]
 
-THIRD_APPS = []
+THIRD_APPS = [
+    'rest_framework',
+    'rest_framework.authtoken',
+    
+]
 
 INSTALLED_APPS = BASE_APPS + MY_APPS + THIRD_APPS
 
