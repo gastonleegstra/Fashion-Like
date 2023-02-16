@@ -1,11 +1,20 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import AbstractUser
 from django.db.models.signals import post_save
 
 
 #genero ruta para guardar avatar
 def photo_up_path(instance,filename):
     return '{0}/{1}'.format(instance.user.username,filename)
+
+class User(AbstractUser):
+    email = models.EmailField(_("email address"), blank=True)
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ["username"]
+
+    def __str__(self) -> str:
+        return self.email
 
 # Create your models here.
 class UserProfile(models.Model):
