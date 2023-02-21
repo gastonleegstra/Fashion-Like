@@ -6,7 +6,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script src="{% static 'menu.js' %}"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 		{% tailwind_css %}
@@ -23,7 +22,7 @@
                     </span>
                 </button>
             </div>
-            <div id="menu" class=" bg-white flex flex-col h-fit absolute top-16">
+            <div id="menu" class=" bg-white flex flex-col h-fit absolute top-16 hidden">
                 <nav>
                     <ul>
                         <li><a href="">Home</a></li>
@@ -97,6 +96,6 @@
             </section>
         </main>
         <footer></footer>
+        <script type="text/javascript" src="{% static 'js/menu.js' %}"></script>
     </body>
 </html>
-  

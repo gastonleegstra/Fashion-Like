@@ -53,7 +53,7 @@ MY_APPS = [
 ]
 
 THIRD_APPS = [
-    'tailwind',
+   'tailwind',
     'theme',
     'django_browser_reload',
 ]

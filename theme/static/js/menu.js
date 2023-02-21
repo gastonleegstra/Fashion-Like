@@ -1,7 +1,7 @@
-const button = document.querySelector('menu-button');
-const menu = document.querySelector('menu');
+const button = document.getElementById('menu-button');
+const menu = document.getElementById('menu');
 
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   menu.classList.toggle('hidden');
 });
